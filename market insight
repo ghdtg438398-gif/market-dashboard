@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>장중 시황</title>
+  <style>
+    body {
+      background: #0b1220;
+      color: #e5e7eb;
+      font-family: Arial;
+      padding: 20px;
+    }
+    h1 { color: #60a5fa; }
+    h2 { margin-top: 30px; color: #93c5fd; }
+    section {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #111827;
+      border-radius: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #2563eb;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📊 장중 시황 (10:40 기준)</h1>
+
+<button onclick="generate()">시황 생성</button>
+
+<section id="market">
+  <h2>1. 국내증시</h2>
+  <div id="market-data"></div>
+</section>
+
+<section id="china">
+  <h2>2. 중국 이슈</h2>
+  <div id="china-data"></div>
+</section>
+
+<section id="issue">
+  <h2>3. 주요 이슈</h2>
+  <div id="issue-data"></div>
+</section>
+
+<section id="theme">
+  <h2>4. 강세업종</h2>
+  <div id="theme-data"></div>
+</section>
+
+<section id="stock">
+  <h2>5. 특징주</h2>
+  <div id="stock-data"></div>
+</section>
+
+<section id="report">
+  <h2>6. 목표가 상향</h2>
+  <div id="report-data"></div>
+</section>
+
+<script>
+function generate() {
+
+  // 1. 국내증시 (임시)
+  document.getElementById("market-data").innerHTML = `
+    코스피: 2600 (+1.2%) <br>
+    코스닥: 850 (+0.8%) <br>
+    개인 -1000억 / 외국인 +500억 / 기관 +500억
+  `;
+
+  // 2. 중국 이슈 (임시)
+  document.getElementById("china-data").innerHTML = `
+    - 중국 경기 부양 기대감<br>
+    - 반도체 투자 확대<br>
+    - 부동산 정책 완화<br>
+    - 소비 회복 기대
+  `;
+
+  // 3. 주요 이슈 (임시)
+  document.getElementById("issue-data").innerHTML = `
+    ① 코스피 상승 지속<br>
+    ② 반도체 강세<br>
+    ③ 외국인 순매수 확대
+  `;
+
+  // 4. 강세업종
+  document.getElementById("theme-data").innerHTML = `
+    - 반도체 장비<br>
+    - AI<br>
+    - 원자력<br>
+    - 통신장비
+  `;
+
+  // 5. 특징주
+  document.getElementById("stock-data").innerHTML = `
+    - 삼성전자 강세<br>
+    - SK하이닉스 상승<br>
+    - 두산 급등<br>
+    - 현대차 상승
+  `;
+
+  // 6. 목표가 상향
+  document.getElementById("report-data").innerHTML = `
+    - 삼성SDI 목표가 상향<br>
+    - 미래에셋증권 목표가 상향<br>
+    - LS 목표가 유지
+  `;
+}
+</script>
+
+</body>
+</html>
